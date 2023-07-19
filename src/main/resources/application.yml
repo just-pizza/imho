@@ -7,3 +7,13 @@ server:
 spring:
  profiles:
   active: local
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    jdbc-url: jdbc:postgresql://study-imho.duckdns.org:5432/imho
+    username: imho_client
+    password: '!mho$Client'
+  jpa:
+    hibernate:
+      #ddl-auto: update  # 애플리케이션 시작 시 자동으로 데이터베이스 테이블을 생성/수정
+    show-sql: true  # 실행되는 SQL문을 로그에 출력
