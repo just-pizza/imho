@@ -34,6 +34,9 @@ public class CommunityComment {
   @Column(name="user_id")
   private String userId;
 
+  @Column(name="post_id")
+  private long postId;
+
   private int enabled;
 
   @Column(name="comments_date")

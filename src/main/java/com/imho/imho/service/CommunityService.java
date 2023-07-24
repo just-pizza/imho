@@ -17,19 +17,33 @@ public class CommunityService {
   @Autowired private UserRepository userRepository;
   @Autowired private CommentRepository commentRepository;
 
+
   public void postWrite(CommunityPost communityPost) {
     postsRepository.save(communityPost);
   }
+
   public List<CommunityPost> getWrite() {
 //    postsRepository.findAll();re
     return postsRepository.findAll();
   }
+  public List<CommunityComment> getComment(long postId) {
+//  postsRepository.findAll();re
+  return commentRepository.findAllByPostId(postId);
+}
+
   public void userMember(CommunityUser communityUser) {
     userRepository.save(communityUser);
   }
+
   public void commentWrite(CommunityComment communityComment) {
     commentRepository.save(communityComment);
   }
 
+  public boolean commentLogin(CommunityUser communityUser) {
+    String userId = communityUser.getUserId();
+    String name = communityUser.getName();
+    boolean val =userRepository.existsByUserIdAndName(userId,name);
+    return val;
+  }
 
 }

@@ -2,10 +2,13 @@ package com.imho.imho.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import com.imho.imho.entity.CommunityComment;
 import com.imho.imho.entity.CommunityUser;
 
 @Repository
 public interface UserRepository extends JpaRepository<CommunityUser ,String>{
+
+  boolean existsByUserIdAndName(String userId, String name);
 
 
   /*
