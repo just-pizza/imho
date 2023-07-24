@@ -26,9 +26,10 @@ public class CommunityService {
 //    postsRepository.findAll();re
     return postsRepository.findAll();
   }
-  public List<CommunityComment> getComment() {
+
+  public List<CommunityComment> getComment(long postId) {
 //  postsRepository.findAll();re
-  return commentRepository.findAll();
+  return commentRepository.findAllByPostId(postId);
 }
 
   public void userMember(CommunityUser communityUser) {

@@ -37,10 +37,11 @@ public class CommunityController {
   }
 
   // 댓글 테이블 조회
-  @GetMapping("/commentget")
-  public List<CommunityComment> getComment() {
-    return communityService.getComment();
+  @GetMapping("/commentget/{postId}")
+  public List<CommunityComment> getComment(@PathVariable("postId") long postId) {
+    return communityService.getComment(postId);
   }
+
   // 회원가입
   @PostMapping("/memberJoin")
   public void userMember(@RequestBody CommunityUser communityUser) {
