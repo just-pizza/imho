@@ -37,6 +37,6 @@ public class CommunityUser {
 
   private String name;
   private String email;
-  boolean login;
+
 
 }
