@@ -5,16 +5,11 @@
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
-
 name: Java CI with Maven
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    
-   
-branches: [ "main" ]
 
 jobs:
   build:
@@ -33,8 +28,6 @@ jobs:
       run: |
         echo "ENV_VARIABLE=value" >> .env
         echo "ANOTHER_ENV_VARIABLE=another_value" >> .env
-
-       
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
