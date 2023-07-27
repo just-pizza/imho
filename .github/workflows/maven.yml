@@ -29,3 +29,16 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    
+    - name: Artifact Upload Jar
+      uses: actions/upload-artifact@v3
+      with:
+        name: imho-artifact
+        path: build/libs/imho.jar
+        retention-days: 10
+        
+    - name: Artifact Download Jar
+      uses: actions/download-artifact@v3
+      with:
+        name: playground-artifact
+      
