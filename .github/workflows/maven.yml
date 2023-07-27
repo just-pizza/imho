@@ -35,9 +35,9 @@ jobs:
         path: build/libs/imho.jar
         retention-days: 10
         
-    - name: Artifact Download Jar
-      uses: actions/download-artifact@v3
-      with:
-        name: imho-artifact
+#     - name: Artifact Download Jar
+#       uses: actions/download-artifact@v3
+#       with:
+#         name: imho-artifact
 
       
