@@ -32,7 +32,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: imho-artifact
-        path: mho.jar
+        path: /home/runner/work/imho/imho/target/imho.jar
         
 #     - name: Artifact Download Jar
 #       uses: actions/download-artifact@v3
