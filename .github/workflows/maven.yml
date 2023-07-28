@@ -32,7 +32,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: imho-artifact
-        path: /taget/imho.jar
+        path: /build/imho.jar
         retention-days: 10
         
 #     - name: Artifact Download Jar
