@@ -11,10 +11,11 @@ spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://study-imho.duckdns.org:5432/imho
-    platform: postgres
+    url: jdbc:postgresql://bingo-playground.duckdns.org:5432/imho
+    #url: jdbc:postgresql://study-imho.duckdns.org:5432/imho
+    #platform: postgres
     username: imho_client
-    password: '!mho$Client' 
+    password: '!mho$Client'  
   # jpa properties
   jpa:
     hibernate:
