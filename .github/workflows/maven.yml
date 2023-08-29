@@ -33,7 +33,18 @@ jobs:
       with:
         name: imho-artifact
         path: target/imho.jar
-        
+
+    
+    - name: Configure Google Cloud SDK
+      uses: google-github-actions/setup-gcloud@master
+      with:
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
+
+    - name: Upload Jar to GCP
+      run: |
+        gsutil cp target/imho.jar gs://your-bucket-name/
 #     - name: Artifact Download Jar
 #       uses: actions/download-artifact@v3
 #       with:
